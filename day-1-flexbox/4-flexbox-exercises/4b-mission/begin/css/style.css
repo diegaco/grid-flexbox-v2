@@ -1,4 +1,4 @@
-/* colors - see style guide for docs. 
+/* colors - see style guide for docs.
 Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
 
 :root {
@@ -40,13 +40,29 @@ section {
     padding: 0 1rem;
 }
 
+[id="mission"] {
+    margin-bottom: 1.875rem;
+    overflow: hidden;
+}
+
+.missiontext {
+    display: block;
+    line-height: 1.7;
+}
+
+.missionimg {
+    max-height: 100px;
+    display: block;
+}
+
+
 section h2 {
     font-size: 2.5rem;
 }
 
 
 /*****************
-New styles begin here and continue to the end of the page 
+New styles begin here and continue to the end of the page
 ****************/
 
 section ul {
@@ -56,7 +72,7 @@ section ul {
 }
 
 
-/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow.
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
 
@@ -155,6 +171,17 @@ figcaption a {
     /* turn off object position, inherit object-fit: cover */
     figure img {
         object-position: 0;
+    }
+
+    .missiontext {
+        display: flow-root;
+        max-width: 900px;
+    }
+
+    .missionimg {
+        float: left;
+        shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+        max-height: 211px;
     }
 }
 
