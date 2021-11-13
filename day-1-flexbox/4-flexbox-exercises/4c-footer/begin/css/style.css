@@ -1,4 +1,4 @@
-/* colors - see style guide for docs. 
+/* colors - see style guide for docs.
 Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
 
 :root {
@@ -51,8 +51,34 @@ section ul {
     margin: 0;
 }
 
+.footer {
+    background-color: var(--color5);
+}
 
-/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+footer address {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow.
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
 
@@ -180,6 +206,18 @@ figcaption a {
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
     }
+
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .social, address {
+        flex-basis: 49.5%;
+    }
+
+
 }
 
 @media (min-width: 800px) {
@@ -188,5 +226,13 @@ figcaption a {
     }
     section li {
         flex-basis: 32.5%;
+    }
+
+    .social {
+        flex-basis: 32.5%;
+    }
+
+    footer address {
+        flex-basis: 65.5%;
     }
 }
