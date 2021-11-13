@@ -1,48 +1,120 @@
-/* colors - see style guide for docs. 
+/* colors - see style guide for docs.
 Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
 
 :root {
-    --color1: #001219;
-    --color2: #005f73;
-    --color3: #3d9397;
-    --color4: #94d28d;
-    --color5: #e9d8a6;
-    --color6: #ee9800;
-    --color7: #ca6702;
-    --color8: #bb3e03;
-    --color9: #ae2012;
-    --color10: #9b2226;
+  --color1: #001219;
+  --color2: #005f73;
+  --color3: #3d9397;
+  --color4: #94d28d;
+  --color5: #e9d8a6;
+  --color6: #ee9800;
+  --color7: #ca6702;
+  --color8: #bb3e03;
+  --color9: #ae2012;
+  --color10: #9b2226;
 }
 
 
 /* generic site styles */
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #DBE5DE;
-    padding: 0;
-    margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #DBE5DE;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 section h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
+
+[id="collections"] > ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+[id="collections"] li {
+  border: 10px solid;
+  flex: 0 0 100%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+[id="collections"] li:nth-child(1) {
+  border-color: var(--color7);
+}
+
+[id="collections"] li:nth-child(2) {
+  border-color: var(--color2);
+}
+
+[id="collections"] li:nth-child(3) {
+  border-color: var(--color6);
+}
+
+[id="collections"] li:nth-child(4) {
+  border-color: var(--color8);
+}
+
+[id="collections"] li:nth-child(5) {
+  border-color: var(--color4);
+}
+
+[id="collections"] li:nth-child(6) {
+  border-color: var(--color3);
+}
+
+[id="collections"] figure {
+  margin: 0;
+  position: relative;
+}
+
+[id="collections"] figcaption {
+  background-color: rgba(255,255,255, .8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+[id="collections"] figcaption a {
+  color: var(--color1);
+  text-decoration: none;
+  font-size: 1.875rem;
+  padding: 1rem;
+  display: block;
+}
+
+[id="collections"] figure > img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
 
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
@@ -50,9 +122,28 @@ section h2 {
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+
+  [id="collections"] > ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  [id="collections"] li {
+    flex: 1 0 49.5%;
+  }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+  [id="collections"] li {
+    flex: 0 0 32.5%;
+  }
+
+  section h2 {
+    margin-left: 100px;
+  }
+}
