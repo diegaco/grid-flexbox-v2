@@ -1,4 +1,4 @@
-/* colors - see style guide for docs. 
+/* colors - see style guide for docs.
 Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
 
 :root {
@@ -138,7 +138,7 @@ nav a:hover {
 }
 
 
-/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow.
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
 
@@ -231,6 +231,30 @@ figcaption a {
 .color8 a:hover {
     border-color: var(--color8);
     color: var(--color8);
+}
+
+.color9,
+.color9 a:hover {
+    border-color: var(--color9);
+    color: var(--color9);
+}
+
+/* Popular prints section */
+
+#popular-prints {
+    background-color: var(--color2);
+    color: #fff;
+    max-width: 100%;
+}
+
+#popular-prints .content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3.125rem 1rem;
+}
+
+#popular-prints h2 {
+    margin-top: 0;
 }
 
 
@@ -355,6 +379,10 @@ footer address {
         color: var(--color2);
         background-color: transparent;
     }
+
+    #popular-prints li:last-child {
+        flex-basis: 100%;
+    }
 }
 
 @media (min-width: 800px) {
@@ -362,6 +390,7 @@ footer address {
         margin-left: 100px;
     }
     section li,
+    #popular-prints li:last-child,
     .social {
         flex-basis: 32.5%;
     }
